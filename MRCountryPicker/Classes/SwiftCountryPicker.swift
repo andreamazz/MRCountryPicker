@@ -21,8 +21,8 @@ struct Country {
   }
 }
 
+@objcMembers
 open class MRCountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
-  
   var countries: [Country]!
   open var selectedLocale: Locale?
   open weak var countryPickerDelegate: MRCountryPickerDelegate?

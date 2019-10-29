@@ -2,8 +2,8 @@
 import Foundation
 import UIKit
 
+@objcMembers
 class NibLoadingView: UIView {
-  
   @IBOutlet weak var view: UIView!
   
   override init(frame: CGRect) {
@@ -37,10 +37,8 @@ class NibLoadingView: UIView {
   
 }
 
-
-
+@objcMembers
 class SwiftCountryView: NibLoadingView {
-  
   @IBOutlet weak var flagImageView: UIImageView!
   @IBOutlet weak var countryNameLabel: UILabel!
   @IBOutlet weak var countryCodeLabel: UILabel!
@@ -64,11 +62,10 @@ class SwiftCountryView: NibLoadingView {
     
     countryCodeLabel.text = country.phoneCode
     
-    
     if let code = country.code,
       let locale = locale {
       countryNameLabel.text = locale.localizedString(forRegionCode: code)
-    }else{
+    } else{
       countryNameLabel.text = country.name
     }
   }
